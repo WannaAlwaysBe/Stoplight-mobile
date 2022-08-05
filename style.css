@@ -1,10 +1,26 @@
 [data-testid="two-column-left"] .sl-bg-success {
   background-color: #0a7bc1;
-  color: #0b2e13;
+  color: red;
+}
+
+[data-testid="two-column-left"] .sl-text-success {
+  color: purple;
 }
 
 [data-testid="two-column-right"] .sl-bg-canvas-200 {
-  background-color: black;
+  background-color: grey;
+}
+
+[data-testid="two-column-right"] .function {
+  color: red !important;
+}
+
+/*[data-testid="two-column-right"] .TryItPanel.sl-bg-canvas-100.sl-rounded-lg {*/
+/*  background-color: ;*/
+/*}*/
+
+#testButton {
+  border: 5px solid red;
 }
 
 @media screen and (max-width: 1200px) {
