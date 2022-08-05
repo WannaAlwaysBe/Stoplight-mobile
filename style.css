@@ -1,18 +1,31 @@
 [data-testid="two-column-left"] .sl-bg-success {
-  background-color: #0a7bc1;
-  color: red;
+  background-color: blue;
+  color: white;
 }
 
 [data-testid="two-column-left"] .sl-text-success {
-  color: purple;
+  color: blue;
+}
+
+[data-testid="two-column-left"] .sl-bg-warning {
+  background-color: red;
+  color: white;
+}
+
+[data-testid="two-column-left"] .sl-text-warning {
+  color: red;
 }
 
 [data-testid="two-column-right"] .sl-bg-canvas-200 {
-  background-color: grey;
+  background-color: #e0e6f0;
+}
+
+[data-testid="two-column-right"] .sl-bg-canvas-100 {
+  background-color: #ebeef5;
 }
 
 [data-testid="two-column-right"] .function {
-  color: red !important;
+  color: blue !important;
 }
 
 /*[data-testid="two-column-right"] .TryItPanel.sl-bg-canvas-100.sl-rounded-lg {*/
