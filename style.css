@@ -60,16 +60,16 @@
   margin: 0;
 }
 
+#attachMenu {
+  z-index: 5000;
+  position: absolute;
+  width: 100%;
+}
+
 @media screen and (max-width: 800px) {
 
   #accordionExample {
     display: none;
-  }
-
-  #attachMenu {
-    z-index: 5000;
-    position: absolute;
-    width: 100%;
   }
 
   .sl-stack.sl-stack--vertical.sl-stack--8.HttpOperation.sl-flex.sl-flex-col.sl-items-stretch.sl-w-full > .sl-flex:nth-child(2) {
