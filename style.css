@@ -56,10 +56,10 @@
     display: none;
     position: absolute;
     z-index: 5000;
-    background: grey;
+    background: #ebeef5;
     border: 5px solid red;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   .sl-stack.sl-stack--vertical.sl-stack--8.HttpOperation.sl-flex.sl-flex-col.sl-items-stretch.sl-w-full > .sl-flex:nth-child(2) {
     flex-direction: column;
