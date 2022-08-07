@@ -1,7 +1,9 @@
 function highlighterAction() {
-  const selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
-  console.log($(selector));
-  $($(selector).detach()).appendTo("#attachMenu");
+  const menu_selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
+  const items_selector = '.sl-my-3';
+  $($(items_selector).detach()).appendTo("#attachMenu");
+  $(menu_selector).detach();
+  console.log($(items_selector).children());
 }
 
 function highlighter() {
@@ -31,11 +33,11 @@ if (document.readyState == 'complete') {
 }
 
 $('#testButton').click(function () {
-  const selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
+  const selector = '.sl-my-3'
   if ($(selector).is(':visible')) {
-    $(selector).css('display', 'none');
+    $(selector).removeClass('unset-hidden');
   }
   else {
-    $(selector).css('display', 'unset');
+    $(selector).addClass('unset-hidden');
   }
 })
