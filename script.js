@@ -14,7 +14,7 @@ function highlighter() {
    */
   setTimeout(function() {
     highlighterAction();
-  }, 200);
+  }, 400);
 }
 
 /*

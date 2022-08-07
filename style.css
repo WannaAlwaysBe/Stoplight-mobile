@@ -54,7 +54,7 @@
 @media screen and (max-width: 800px) {
   .sl-my-3 {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 5000;
     background: grey;
     border: 5px solid red;
