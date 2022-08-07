@@ -3,7 +3,35 @@ function highlighterAction() {
   const items_selector = '.sl-my-3';
   $($(items_selector).detach()).appendTo("#attachMenu");
   $(menu_selector).detach();
-  console.log($(items_selector).children());
+  // $(items_selector).children().each(function () {
+  //   console.log(this);
+  // });
+
+
+  // const headings = $('.sl-my-3')
+  //     .children('div')
+  //     .filter(function() {return !$(this).attr('title')});
+  //
+  // const accordions = [];
+  //
+  // headings.each(function(i, heading) {
+  //   if (i === headings.length - 1) {
+  //     accordions.push({
+  //       heading: heading,
+  //       links: $(heading).nextAll(),
+  //     });
+  //   } else {
+  //     accordions.push({
+  //       heading: heading,
+  //       links: $(heading).nextAll($(headings[i + 1])),
+  //     });
+  //   }
+  // });
+  // console.log(accordions);
+  //
+  // let a = $(accordions[0].heading).clone();
+  // a.append(accordions[0].links.clone());
+  // $('#testAccordion').append(a);
 }
 
 function highlighter() {
@@ -33,7 +61,7 @@ if (document.readyState == 'complete') {
 }
 
 $('#testButton').click(function () {
-  const selector = '.sl-my-3'
+  const selector = '#accordionExample'
   if ($(selector).is(':visible')) {
     $(selector).removeClass('unset-hidden');
   }

@@ -39,7 +39,7 @@
   border: 5px solid red;
 }
 
-.sl-my-3 {
+#accordionExample {
   display: unset;
 }
 
@@ -51,16 +51,27 @@
   color: black !important;
 }
 
+#attachMenu {
+  background: #ebeef5;
+}
+
+.sl-my-3 {
+  padding: 20px 0;
+  margin: 0;
+}
+
 @media screen and (max-width: 800px) {
-  .sl-my-3 {
+
+  #accordionExample {
     display: none;
-    position: absolute;
-    z-index: 5000;
-    background: #ebeef5;
-    border: 5px solid red;
-    width: 100%;
-    height: auto;
   }
+
+  #attachMenu {
+    z-index: 5000;
+    position: absolute;
+    width: 100%;
+  }
+
   .sl-stack.sl-stack--vertical.sl-stack--8.HttpOperation.sl-flex.sl-flex-col.sl-items-stretch.sl-w-full > .sl-flex:nth-child(2) {
     flex-direction: column;
   }
