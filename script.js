@@ -1,8 +1,29 @@
-function highlighterAction() {
-  const menu_selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
-  const items_selector = '.sl-my-3';
-  $($(items_selector).detach()).appendTo("#attachMenu");
-  $(menu_selector).detach();
+document.addEventListener('DOMContentLoaded', function() {
+  var $stoplight = $('elements-api');
+  var $menu = $('.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r');
+  const config = {
+    childList: true,
+    subtree: true,
+  };
+  console.log($stoplight);
+
+  var observer = new MutationObserver(() => {
+    console.log('test');
+    const menu_selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
+    const items_selector = '.sl-my-3';
+    $($(items_selector).detach()).appendTo("#attachMenu");
+    $(menu_selector).detach();
+    observer.disconnect();
+  });
+
+  observer.observe($stoplight[0], config);
+})
+
+// function highlighterAction() {
+//   const menu_selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
+//   const items_selector = '.sl-my-3';
+//   $($(items_selector).detach()).appendTo("#attachMenu");
+//   $(menu_selector).detach();
   // $(items_selector).children().each(function () {
   //   console.log(this);
   // });
@@ -32,40 +53,40 @@ function highlighterAction() {
   // let a = $(accordions[0].heading).clone();
   // a.append(accordions[0].links.clone());
   // $('#testAccordion').append(a);
-}
+// }
 
-function highlighter() {
-  /*
-    The short pause allows any required callback functions
-    to execute before actually highlighting, and allows
-    the JQuery $(document).ready wrapper to finish.
-   */
-  setTimeout(function() {
-    highlighterAction();
-  }, 400);
-}
+// function highlighter() {
+//   /*
+//     The short pause allows any required callback functions
+//     to execute before actually highlighting, and allows
+//     the JQuery $(document).ready wrapper to finish.
+//    */
+//   setTimeout(function() {
+//     highlighterAction();
+//   }, 400);
+// }
 
-/*
-  Only trigger the highlighter after document fully loaded.  This is
-  necessary for cases where page load takes a significant length
-  of time to fully load.
-*/
-if (document.readyState == 'complete') {
-  highlighter();
-} else {
-  document.onreadystatechange = function () {
-    if (document.readyState === "complete") {
-      highlighter();
-    }
-  }
-}
+// /*
+//   Only trigger the highlighter after document fully loaded.  This is
+//   necessary for cases where page load takes a significant length
+//   of time to fully load.
+// */
+// if (document.readyState == 'complete') {
+//   highlighter();
+// } else {
+//   document.onreadystatechange = function () {
+//     if (document.readyState === "complete") {
+//       highlighter();
+//     }
+//   }
+// }
 
-$('#testButton').click(function () {
-  const selector = '#accordionExample'
-  if ($(selector).is(':visible')) {
-    $(selector).removeClass('unset-hidden');
-  }
-  else {
-    $(selector).addClass('unset-hidden');
-  }
-})
+// $('#testButton').click(function () {
+//   const selector = '#accordionExample'
+//   if ($(selector).is(':visible')) {
+//     $(selector).removeClass('unset-hidden');
+//   }
+//   else {
+//     $(selector).addClass('unset-hidden');
+//   }
+// })
