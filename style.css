@@ -1,58 +1,10 @@
-[data-testid="two-column-left"] .sl-bg-success {
-  background-color: blue;
-  color: white;
+elements-api {
+  width: 100%;
 }
 
-[data-testid="two-column-left"] .sl-text-success {
-  color: blue;
-}
-
-[data-testid="two-column-left"] .sl-bg-warning {
-  background-color: red;
-  color: white;
-}
-
-[data-testid="two-column-left"] .sl-text-warning {
-  color: red;
-}
-
-[data-testid="two-column-right"] .sl-bg-canvas-200 {
-  background-color: #e0e6f0;
-  color: black;
-}
-
-[data-testid="two-column-right"] .sl-bg-canvas-100 {
-  background-color: #ebeef5;
-  color: black;
-}
-
-[data-testid="two-column-right"] .function {
-  color: blue !important;
-}
-
-/*[data-testid="two-column-right"] .TryItPanel.sl-bg-canvas-100.sl-rounded-lg {*/
-/*  background-color: ;*/
-/*}*/
-
-#testButton {
-  display: none;
-  border: 5px solid red;
-}
-
-#accordionExample {
-  display: unset;
-}
-
-.unset-hidden {
-  display: unset !important;
-}
-
-.sl-inverted {
-  color: black !important;
-}
-
-#attachMenu {
-  background: #ebeef5;
+.menu {
+  width: 300px;
+  border-right: 1px solid #E5E6EB;
 }
 
 .sl-my-3 {
@@ -60,19 +12,17 @@
   margin: 0;
 }
 
-#attachMenu {
-  z-index: 5000;
-  position: absolute;
-  width: 100%;
+.sl-my-3 .sl-bg-canvas-100 {
+  background-color: white;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 
-  #accordionExample {
+  .menu {
     display: none;
   }
 
-  .sl-stack.sl-stack--vertical.sl-stack--8.HttpOperation.sl-flex.sl-flex-col.sl-items-stretch.sl-w-full > .sl-flex:nth-child(2) {
+  .sl-stack.sl-stack--vertical.sl-stack--8.HttpOperation.sl-flex.sl-flex-col.sl-items-stretch.sl-w-full>.sl-flex:nth-child(2) {
     flex-direction: column;
   }
 
@@ -92,9 +42,4 @@
     padding-right: 20px;
     padding-left: 20px;
   }
-
-  #testButton {
-    display: unset;
-  }
-
 }

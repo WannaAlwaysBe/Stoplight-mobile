@@ -8,25 +8,28 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log($stoplight);
 
   var observer = new MutationObserver(() => {
-    console.log('test');
-    const menu_selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
-    const items_selector = '.sl-my-3';
-    $($(items_selector).detach()).appendTo("#attachMenu");
-    $(menu_selector).detach();
+    extractMenu();
     observer.disconnect();
   });
 
   observer.observe($stoplight[0], config);
 })
 
+function extractMenu() {
+  const menu_selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
+  const items_selector = '.sl-my-3';
+  $($(items_selector).detach()).appendTo("#attachMenu");
+  $(menu_selector).detach();
+}
+
 // function highlighterAction() {
 //   const menu_selector = '.sl-flex.sl-overflow-y-auto.sl-flex-col.sl-sticky.sl-inset-y-0.sl-pt-8.sl-bg-canvas-100.sl-border-r'
 //   const items_selector = '.sl-my-3';
 //   $($(items_selector).detach()).appendTo("#attachMenu");
 //   $(menu_selector).detach();
-  // $(items_selector).children().each(function () {
-  //   console.log(this);
-  // });
+//   $(items_selector).children().each(function () {
+//     console.log(this);
+//   });
 
 
   // const headings = $('.sl-my-3')
